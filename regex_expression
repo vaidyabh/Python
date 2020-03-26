@@ -1,0 +1,28 @@
+#This file will contain the basic example of the regex expression
+
+#Improting the lirararies
+import re
+
+#Print the string separated by the / in the string
+
+python_string = 'test/file/location/data'
+ 
+# Print the string 
+  re.search(r'(.*)/(.*)', python_string).group(0)
+  '''
+      OUTPUT: 'test/file/location/data'
+  '''
+
+
+# Print the string before last /
+  re.search(r'(.*)/(.*)', python_string).group(1)
+  '''
+      OUTPUT: 'test/file/location'
+  '''
+
+
+# print the last data after last /
+  re.search(r'(.*)/(.*)', python_string).group(2)
+    '''
+      OUTPUT: 'data'
+  '''
