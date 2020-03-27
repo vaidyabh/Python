@@ -23,6 +23,35 @@ python_string = 'test/file/location/data'
 
 # print the last data after last /
   re.search(r'(.*)/(.*)', python_string).group(2)
-    '''
+  '''
       OUTPUT: 'data'
   '''
+
+
+# Search if a character or the pattern exists in the string
+# Find / in the string named search_string
+
+ search_string = 'test/file/location/data'
+
+if '/' in search_string:
+    print(True)
+else:
+    print(False)
+
+
+'''
+      OUTPUT: True
+  '''
+
+
+
+if '/' in search_string:
+    print(True)
+else:
+    print(False)
+    
+   
+'''
+      OUTPUT: False
+  '''
+   
