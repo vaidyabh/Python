@@ -1,3 +1,4 @@
+# Pass command line arguments using argparse
 import argparse
 
 parser = argparse.ArgumentParser(description='Passing command line arguments')
