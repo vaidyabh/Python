@@ -12,3 +12,6 @@ country = args.country
 
 print('file is', file)
 print('country is', country)
+
+# Passing command line arguments using os.sys
+import os
