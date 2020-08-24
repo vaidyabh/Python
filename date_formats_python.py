@@ -1,6 +1,7 @@
 #Importing the modules
 from datetime import datetime, timedelta
 
+
 #Current timespan
 current_time = datetime.now()
 print(current_time)
