@@ -1,0 +1,47 @@
+# def longest_consec(strarr, k):
+#     longest_arr = ''
+#     # Read all the values except number of consecutive occurance
+#     # If k = 1, then need to return the longest string - AV
+#     if k <= 0:
+#         longest_arr = ''
+#         return longest_arr
+#     elif k == 1:
+#         for i in range (0, len(strarr)):
+#             if len(longest_arr) < len(strarr[i]):
+#                 longest_arr = strarr[i]
+#         return longest_arr
+#     # When k is > 1 -- AV
+#     else:
+#         for key in range(len(strarr) - k + 1):
+#             arr_data = ''.join(strarr[key : key + k])
+            
+#         # If the length of the new consecutive occurance is > old occurance, replace it
+#             if len(arr_data) > len(longest_arr):
+#                 longest_arr = arr_data
+
+#         return longest_arr
+
+# testing(longest_consec(["zone", "abigail", "theta", "form", "libe", "zas"], 2), "abigailtheta")
+# testing(longest_consec(["ejjjjmmtthh", "zxxuueeg", "aanlljrrrxx", "dqqqaaabbb", "oocccffuucccjjjkkkjyyyeehh"], 1), "oocccffuucccjjjkkkjyyyeehh")
+# testing(longest_consec([], 3), "")
+# testing(longest_consec(["itvayloxrp","wkppqsztdkmvcuwvereiupccauycnjutlv","vweqilsfytihvrzlaodfixoyxvyuyvgpck"], 2), "wkppqsztdkmvcuwvereiupccauycnjutlvvweqilsfytihvrzlaodfixoyxvyuyvgpck")
+# testing(longest_consec(["wlwsasphmxx","owiaxujylentrklctozmymu","wpgozvxxiu"], 2), "wlwsasphmxxowiaxujylentrklctozmymu")
+# testing(longest_consec(["zone", "abigail", "theta", "form", "libe", "zas"], -2), "")
+# testing(longest_consec(["it","wkppv","ixoyx", "3452", "zzzzzzzzzzzz"], 3), "ixoyx3452zzzzzzzzzzzz")
+# testing(longest_consec(["it","wkppv","ixoyx", "3452", "zzzzzzzzzzzz"], 15), "")
+# testing(longest_consec(["it","wkppv","ixoyx", "3452", "zzzzzzzzzzzz"], 0), "")
+
+
+
+def longest_consec(strarr, k):
+    result = ""
+    
+    if k > 0 and len(strarr) >= k:
+        for index in range(len(strarr) - k + 1):
+            s = ''.join(strarr[index:index+k])
+            if len(s) > len(result):
+                result = s
+            
+    return result
+
+print(longest_consec(["ejjjjmmtthh", "zxxuueeg", "aanlljrrrxx", "dqqqaaabbb", "oocccffuucccjjjkkkjyyyeehh"], 1))    
