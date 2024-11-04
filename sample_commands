@@ -1,0 +1,4 @@
+# Reverse List elements
+  e.g. input = [1,2,3] output = [3,2,1]
+
+  output = reverse(input)
