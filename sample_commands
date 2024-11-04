@@ -1,4 +1,8 @@
-# Reverse List elements
-  e.g. input = [1,2,3] output = [3,2,1]
+# 1)  Reverse List elements and join as string
+    e.g. input = [1,2,3] output = [3,2,1]
+    output =  [item for item in reversed(input)]
 
-  output = reverse(input)
+# 2) Reverse list and join to convert to string
+    e.g. input = [1,2,3] number = 321
+    number = ''.join(str(x) for x in reversed(input))
+
